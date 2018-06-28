@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Princing 2.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Android</title>
+
+    <!-- Page styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/material.css">
+    <link rel="stylesheet" href="css/chau.css">
+    <link rel="stylesheet" href="css/android.css">
+    <style>
+    #view-source {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+      <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
+        <div class="mdl-layout__header-row">
+          <span class="android-title mdl-layout-title">
+            <img class="android-logo-image" src="img/LOGO-INTERBANK.png">
+          </span>
+          <!-- Add spacer, to align navigation to the right in desktop -->
+          <div class="android-header-spacer mdl-layout-spacer"></div>
+
+            
+          <!-- Navigation -->
+          <div class="android-navigation-container">
+            <nav class="android-navigation mdl-navigation">
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Evaluar ROA</a>
+            </nav>
+          </div>
+            
+          <span class="android-mobile-title mdl-layout-title">
+            <img class="android-logo-image" src="img/LOGO-INTERBANK.png">
+          </span>
+            
+                    
+            
+        </div>
+      </div>
+
+      <div class="android-content mdl-layout__content">
+        <a name="top"></a>
+        <div class="intento-together-section mdl-typography--text-left">
+          <div class="logo-font chau-slogan">Simulador Pricing Dínamico</div>
+          <div class="logo-font chau-sub-slogan">Bienvenido al Simulador de Princing Hipotecario....</div>
+
+        </div>
+          
+          
+        <div class="android-customized-section">
+
+          
+          <div class="chau-customized-section-text">
+
+                  <!--div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">Evalua vía online, es fácil y rápido</div-->
+
+              
+                       <form id="regForm" action="">
+
+                        <!-- One "tab" for each step in the form: -->
+                            <div class="tab">
+
+                                <!-- TIPO DOCUMENTO -->
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height">
+                                        <input type="text" value="" class="mdl-textfield__input" id="TipDoc" readonly>
+                                        <input type="hidden" value="" name="TDoc">
+                                        <label for="TipDoc" class="mdl-textfield__label">Tipo Documento</label>
+                                        <ul for="TipDoc" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                                            <li class="mdl-menu__item" data-val="1" data-selected="true">DNI</li>
+                                            <li class="mdl-menu__item" data-val="3">Carnet de Extranjeria</li>
+                                        </ul>
+                                    </div>
+                                <!-- DNI -->
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="idDNI">
+                                        <label class="mdl-textfield__label" for="idDNI">Número de Documento</label>
+                                    </div>
+
+                                <!-- Nuevo Cliente -->
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height">
+                                        <input type="text" value="" class="mdl-textfield__input" id="nuevCli" readonly>
+                                        <input type="hidden" value="" name="nuevCli">
+                                        <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+                                        <label for="nuevCli" class="mdl-textfield__label">Nuevo Cliente (S/N)</label>
+                                        <ul for="nuevCli" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                                            <li class="mdl-menu__item" data-val="1" data-selected="true">Sí</li>
+                                            <li class="mdl-menu__item" data-val="0">No</li>
+                                        </ul>
+                                    </div>
+
+                            </div>
+
+                        <div class="tab">
+                                <!-- PRODUCTO HIPOTECARIO -->
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height">
+                                        <input type="text" value="" class="mdl-textfield__input" id="ProdHipo" readonly>
+                                        <input type="hidden" value="" name="ProdHipo">
+                                        <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+                                        <label for="ProdHipo" class="mdl-textfield__label">Producto Hipotecario</label>
+                                        <ul for="ProdHipo" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                                            <li class="mdl-menu__item" data-val="0" data-selected="true">Tradicional</li>
+                                            <li class="mdl-menu__item" data-val="1">Mi Vivienda</li>
+                                            <li class="mdl-menu__item" data-val="2">Mi Vivienda Cofide</li>
+                                            <li class="mdl-menu__item" data-val="3">Mi Vivienda Recursos Propios</li>
+                                            <li class="mdl-menu__item" data-val="4">Techo Propio</li>
+                                            <li class="mdl-menu__item" data-val="5">Mi Hogar</li>
+                                        </ul>
+                                    </div>
+
+                                <!-- MONTO -->
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="idMonto">
+                                        <label class="mdl-textfield__label" for="Monto">Monto</label>
+                                    </div>
+
+                                <!-- PLAZO -->
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="idPlazo">
+                                        <label class="mdl-textfield__label" for="Plazo">Plazo</label>
+                                    </div>
+                        </div>
+
+                        <div class="tab">
+
+                                <!-- TIPO PERSONA -->
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height">
+                                        <input type="text" value="" class="mdl-textfield__input" id="TipPer" readonly>
+                                        <input type="hidden" value="" name="TipPer">
+                                        <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+                                        <label for="TipPer" class="mdl-textfield__label">Tipo Persona</label>
+                                        <ul for="TipPer" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                                            <li class="mdl-menu__item" data-val="1" data-selected="true">Natural</li>
+                                            <li class="mdl-menu__item" data-val="2">Mancomunada</li>
+                                        </ul>
+                                    </div>
+
+                                <!-- CANAL ADQUISICION -->
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height">
+                                        <input type="text" value="" class="mdl-textfield__input" id="Canal" readonly>
+                                        <input type="hidden" value="" name="Canal">
+                                        <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+                                        <label for="Canal" class="mdl-textfield__label">Canal Adquisición</label>
+                                        <ul for="Canal" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                                            <li class="mdl-menu__item" data-val="0" data-selected="true">Masivo</li>
+                                            <li class="mdl-menu__item" data-val="1">Premium</li>
+                                            <li class="mdl-menu__item" data-val="2">Digital</li>
+                                            <li class="mdl-menu__item" data-val="3">Promotores</li>
+                                            <li class="mdl-menu__item" data-val="4">TL</li>
+                                            <li class="mdl-menu__item" data-val="5">TP</li>
+                                            <li class="mdl-menu__item" data-val="6">Colaboradores</li>
+                                        </ul>
+                                    </div>
+
+                                <!-- SEGURO -->
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height">
+                                        <input type="text" value="" class="mdl-textfield__input" id="Segur" readonly>
+                                        <input type="hidden" value="" name="Segur">
+                                        <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+                                        <label for="Segur" class="mdl-textfield__label">Seguro dorado (S/N)</label>
+                                        <ul for="Segur" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                                            <li class="mdl-menu__item" data-val="1" data-selected="true">Sí</li>
+                                            <li class="mdl-menu__item" data-val="0">No</li>
+                                        </ul>
+                                    </div>
+                            
+                            </div>
+
+                                <div style="overflow:auto;">
+                                  <div style="float:right;">
+                                    <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                                    <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                                  </div>
+                                </div>
+
+                                <!-- Circles which indicates the steps of the form: -->
+                                <div style="text-align:center;margin-top:40px;">
+                                  <span class="step"></span>
+                                  <span class="step"></span>
+                                  <span class="step"></span>
+                                  <span class="step"></span>
+                                </div>
+
+                           
+                        </form>
+              
+          </div>
+             
+              <br>
+           
+            
+          <!--div class="android-customized-section-image"></div -->
+                        
+        </div>
+   
+          
+          
+          
+      </div>
+    </div>
+
+    <script src="js/material.js"></script>
+    <script src="js/stepper.js"></script>
+    <SCRIPT SRC="JS/getmdl-select.min.js"> </SCRIPT>
+      
+  </body>
+</html>
